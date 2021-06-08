@@ -9,24 +9,43 @@
 
 
 // creo un array per poi aggiungere i 16 numeri casuali.
-var randomNumber = [];
-console.log(randomNumber);
+var randomNumbers = [];
 
 
 // creo i 16 numeri random e li pusho nell array
-while (randomNumber.length < 16) {
-    var numeroCasuale = Math.floor(Math.random() * 100);
+while (randomNumbers.length < 16) {
+    var numeroCasuale = Math.floor(Math.random() * 100 )+1;
 
-    if (randomNumber.includes(numeroCasuale) == false) {
-        randomNumber.push(numeroCasuale);
+    if (!randomNumbers.includes(numeroCasuale)) {
+        randomNumbers.push(numeroCasuale);
     }  
 }
+console.log(randomNumbers);
 
 // creo un array per contenere i numeri dell'utente
 var arrayUserNumbers = [];
-console.log(userNumber);
+console.log(arrayUserNumbers);
 
 // chiedo all utente un numero da 1 a 100 per 84 volte
-while (arrayUserNumbers.length < 84 && ) {
-    var Usernumber
+while (arrayUserNumbers.length < 84) {
+    var userNumber = parseInt(prompt('Inserisci un numero da 1 a 100'));
+    if(userNumber <= 100 && userNumber >= 1){
+        if(!randomNumbers.includes(userNumber)) {
+
+            if (!arrayUserNumbers.includes(userNumber)) {
+                arrayUserNumbers.push(userNumber);
+            } else {
+                alert('Numero precendentemente utilizzato!')
+            }
+        } else {
+            alert('Hai Perso!')
+            break;
+        }
+    } else {
+        alert('Test de cas solo i numeri da 1 a 100');
+    }
+   
 }
+
+// dichiarare punteggio
+alert('Il tuo punteggio è: ' + arrayUserNumbers.length);
