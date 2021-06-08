@@ -13,11 +13,20 @@ var randomNumber = [];
 console.log(randomNumber);
 
 
-// creo i 16 numeri random
+// creo i 16 numeri random e li pusho nell array
 while (randomNumber.length < 16) {
     var numeroCasuale = Math.floor(Math.random() * 100);
 
     if (randomNumber.includes(numeroCasuale) == false) {
         randomNumber.push(numeroCasuale);
     }  
+}
+
+// creo un array per contenere i numeri dell'utente
+var arrayUserNumbers = [];
+console.log(userNumber);
+
+// chiedo all utente un numero da 1 a 100 per 84 volte
+while (arrayUserNumbers.length < 84 && ) {
+    var Usernumber
 }
