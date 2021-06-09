@@ -7,6 +7,8 @@
 // Al termine della partita il software deve comunicare il punteggio, 
 // cioè il numero di volte che l’utente ha inserito un numero consentito.
 
+document.getElementById("hidden").hidden=true;
+
 // scegli difficoltà
 var x = 0;
 var difficoltà = prompt('Scegli difficoltà tra: 0 (facile), 1 (medio), 2 (difficile)')
@@ -35,9 +37,12 @@ console.log(randomNumbers);
 var arrayUserNumbers = [];
 console.log(arrayUserNumbers);
 
+
+
 // chiedo all utente un numero da 1 a 100 per 84 volte
 while (arrayUserNumbers.length < (x - 16)) {
     var userNumber = parseInt(prompt('Inserisci un numero da 1 a ' + x));
+
     if(userNumber <= x && userNumber >= 1){
         if(!randomNumbers.includes(userNumber)) {
 
@@ -51,10 +56,11 @@ while (arrayUserNumbers.length < (x - 16)) {
             break;
         }
     } else {
-        alert('Test de cas solo i numeri da 1 a ' + x);
+        alert('Solo i numeri da 1 a ' + x);
     }
    
 }
 
 // dichiarare punteggio
-alert('Il tuo punteggio è: ' + arrayUserNumbers.length);
+document.getElementById("hidden").hidden=false;
+document.getElementById('punteggio').innerHTML =arrayUserNumbers.length;

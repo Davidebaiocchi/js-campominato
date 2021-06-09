@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    height: 900px;
+    line-height: 900px;
+    background-color: black;
+    padding: 50px;
+}
+
+span {
+    font-size: 80px;   
+    margin-top: 400px; 
+    color: blue;
+    font-weight: 600;
+    text-transform: uppercase; 
+    background-color: black;  
+    padding: 30px;
+    position: relative;
+    bottom: 20px;
+}
+
+#hidden {
+    background-image: url(https://curiosando708090.altervista.org/wp-content/uploads/2016/12/campo-minato-i-classici-giochi-prato-fiorito.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+}
